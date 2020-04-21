@@ -11,8 +11,8 @@ Proxy Checker using a *Cloudflare* protected website to judge proxies, so that w
 ## Install
 
 ```bash
-npm install express 
-npm install http 
+npm install express
+npm install http
 npm install socket.io
 npm install proxy-agent
 npm install request
