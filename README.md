@@ -21,7 +21,7 @@ npm install request
 ## Usage
 
 ```bash
-node index.js 
+node index.js
 ```
 Then just browse to localhost:8701
 
