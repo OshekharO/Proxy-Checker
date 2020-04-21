@@ -1,7 +1,6 @@
 # Proxy-Checker
 
-Proxy Checker using a Cloudflare protected website to judge proxies, so that way you only get premium proxies as "live".
-(*html version*)
+Proxy Checker using a *Cloudflare* protected website to judge proxies, so that way you only get premium proxies as "live".
 
 ## Install
 
