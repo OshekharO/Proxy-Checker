@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy Checker</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="copy.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<script>
+    $(function () {
+        var socket = io()
+        $("#form").on("submit", function () {
+            event.preventDefault()
+            socket.emit('timeout', $('#timeout').val())
+            socket.emit('check', $('#list').val())
+        })
+        socket.on('work', function (message) {
+            document.getElementById("work").value += `${message}\r\n`
+        })
+    })
+</script>
+
+<body>
+    <center>
+        <form id="form" method="">
+            <br>
+            <br>
+            <br>
+            <h1>Proxy Checker</h1>
+            <h6>by LastMalware<h6>
+            <br>
+            <br>
+            <label for="timeout">Proxy list</label><br>
+            <textarea id="list" class="btn btn-light" placeholder="127.0.0.1:8080" cols="30" style="font-size: 12pt"></textarea><br><br>
+            <label for="timeout">Timeout</label><br>
+            <input id="timeout" class="btn btn-light" name="timeout" type="text" value="2"><br><br>
+            <button type="submit" class="btn btn-dark">Start</button><br><br>
+            <label for="timeout">Live Proxies</label><br>
+            <textarea id="work" class="btn btn-light btn-lg" placeholder="..." cols="30" style="font-size: 12pt"></textarea>
+            <br>
+            <br>
+            <br>
+
+
+
+            
+        </form>
+    </center>
+
+</body>
+
+</html>
