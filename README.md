@@ -18,6 +18,7 @@ npm install request
 ```bash
 node index.js 
 ```
+Then just browse to localhost:8701
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
