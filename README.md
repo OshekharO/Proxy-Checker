@@ -31,4 +31,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+MIT
+
+
+ <i style='text-align: center; color: red;font-size: 13px;'>CopyRight © lastmalware 2021</i> 
