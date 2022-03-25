@@ -26,13 +26,5 @@ node index.js
 Then just browse to localhost:8701
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-MIT
-
-
- <i style='text-align: center; color: red;font-size: 13px;'>CopyRight © lastmalware 2021</i> 
